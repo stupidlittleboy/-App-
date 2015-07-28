@@ -1,11 +1,137 @@
 1.	Cloneable接口
+
 	copy和原型的内容一样，但是又是彼此隔离的。即在clone之后，改变其中一个不影响另外一个
-	
+
 	http://kentkwan.iteye.com/blog/739514
+	http://blog.csdn.net/leilu2008/article/details/6712535
 
+------------------------------------------------------------------------------------------------------------------------------------------------
 
-	volatile关键字
-hashmap key是否可重复
-HashMap（1）
-List
-Double和double关系
+2.	volatile关键字
+
+	Java语言是支持多线程的，为了解决线程并发的问题，在语言内部引入了 同步块 和 volatile 关键字机制。
+
+	--synchronized ：
+	同步块大家都比较熟悉，通过 synchronized 关键字来实现，所有加上synchronized 和 块语句，在多线程访问的时候，同一时刻只能有一个线程能够用synchronized 修饰的方法 或者 代码块。
+
+	--volatile：
+	用volatile修饰的变量，线程在每次使用变量的时候，都会读取变量修改后的最的值。volatile很容易被误用，用来进行原子性操作。
+	对于volatile修饰的变量，jvm虚拟机只是保证从主内存加载到线程工作内存的值是最新的
+
+	在使用volatile关键字时要慎重，并不是只要简单类型变量使用volatile修饰，对这个变量的所有操作都是原来操作，当变量的值由自身的上一个决定时，如n=n+1、n++ 等，volatile关键字将失效，只有当变量的值和自身上一个值无关时对该变量的操作才是原子级别的，如n = m + 1，这个就是原级别的
+
+	Java语言规范第三版中对volatile的定义如下： java编程语言允许线程访问共享变量，为了确保共享变量能被准确和一致的更新，线程应该确保通过排他锁单独获得这个变量。Java语言提供了volatile，在某些情况下比锁更加方便。如果一个字段被声明成volatile，java线程内存模型确保所有线程看到这个变量的值是一致的。
+
+	为什么要使用Volatile？
+	Volatile变量修饰符如果使用恰当的话，它比synchronized的使用和执行成本会更低，因为它不会引起线程上下文的切换和调度。
+
+	http://www.cnblogs.com/aigongsi/archive/2012/04/01/2429166.html
+	http://www.infoq.com/cn/articles/ftf-java-volatile（深入分析Volatile的实现原理 ）
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. Java中的集合
+
+	java.util.Collection [I]
+
+		+--java.util.List [I]
+			List是有序的Collection，使用此接口能够精确的控制每个元素插入的位置。用户能够使用索引（元素在List中的位置，类似于数组下标）来访问List中的元素，这类似于Java的数组
+
+   			+--java.util.ArrayList [C]
+   				ArrayList实现了可变大小的数组。它允许所有元素，包括null。ArrayList没有同步。
+
+   			+--java.util.LinkedList [C]
+   				inkedList实现了List接口，允许null元素。此外LinkedList提供额外的get，remove，insert方法在 LinkedList的首部或尾部
+
+   			+--java.util.Vector [C]
+   				Vector非常类似ArrayList，但是Vector是同步的
+
+     		+--java.util.Stack [C]
+     			Stack继承自Vector，实现一个后进先出的堆栈
+
+		+--java.util.Set [I]
+			Set是一种不能包含有重复元素的集合，即对于满足e1.equals(e2)条件的e1与e2对象元素，不能同时存在于同一个Set集合里
+			Set最多有一个null元素
+
+   			+--java.util.HashSet [C]
+   				此类实现 Set 接口，由哈希表（实际上是一个 HashMap 实例）支持。它不保证集合的迭代顺序；特别是它不保证该顺序恒久不变。此类允许使用 null 元素
+   				HashSet不是同步的
+
+   		+--java.util.SortedSet [I]
+      	+--java.util.TreeSet [C]
+
+	java.util.Map [I]
+		Map没有继承Collection接口。也就是说Map和Collection是2种不同的集合。Collection可以看作是（value）的集合，而Map可以看作是（key，value）的集合
+		Map接口由Map的内容提供3种类型的集合视图，一组key集合，一组value集合，或者一组key-value映射关系的集合
+
+		+--java.util.SortedMap [I]
+   		+--java.util.TreeMap [C]
+		+--java.util.Hashtable [C]
+			Hashtable继承Map接口，实现一个key-value映射的哈希表。任何非空（non-null）的对象都可作为key或者value。
+			Hashtable是同步的
+
+		+--java.util.HashMap [C]
+			HashMap和Hashtable类似，不同之处在于HashMap是非同步的，并且允许null，即null value和null key，由于是非同步的，所以速度叫HashTable快
+
+		+--java.util.LinkedHashMap [C]
+
+		+--java.util.WeakHashMap [C]
+			 WeakHashMap是一种改进的HashMap，它对key实行“弱引用”，如果一个key不再被外部所引用，那么该key可以被GC回收
+
+	[I]：接口
+	[C]：类
+
+	总结：
+    如果涉及到堆栈，队列等操作，应该考虑用List，对于需要快速插入，删除元素，应该使用LinkedList，如果需要快速随机访问元素，应该使用ArrayList。
+    如果程序在单线程环境中，或者访问仅仅在一个线程中进行，考虑非同步的类，其效率较高，如果多个线程可能同时操作一个类，应该使用同步的类。
+    在除需要排序时使用TreeSet,TreeMap外,都应使用HashSet,HashMap,因为他们 的效率更高。
+    要特别注意对哈希表的操作，作为key的对象要正确复写equals和hashCode方法。
+ 
+    容器类仅能持有对象引用（指向对象的指针），而不是将对象信息copy一份至数列某位置。一旦将对象置入容器内，便损失了该对象的型别信息。
+    尽量返回接口而非实际的类型，如返回List而非ArrayList，这样如果以后需要将ArrayList换成LinkedList时，客户端代码不用改变。这就是针对抽象编程。
+ 
+	注意：
+	1、Collection没有get()方法来取得某个元素。只能通过iterator()遍历元素。
+	2、Set和Collection拥有一模一样的接口。
+	3、List，可以通过get()方法来一次取出一个元素。使用数字来选择一堆对象中的一个，get(0)...。(add/get)
+	4、一般使用ArrayList。用LinkedList构造堆栈stack、队列queue。
+	5、Map用 put(k,v) / get(k)，还可以使用containsKey()/containsValue()来检查其中是否含有某个key/value。
+	   HashMap会利用对象的hashCode来快速找到key。	 
+	6、Map中元素，可以将key序列、value序列单独抽取出来。
+	使用keySet()抽取key序列，将map中的所有keys生成一个Set。
+	使用values()抽取value序列，将map中的所有values生成一个Collection。
+	为什么一个生成Set，一个生成Collection？那是因为，key总是独一无二的，value允许重复。
+
+	http://android.blog.51cto.com/268543/400557
+	http://blog.csdn.net/softwave/article/details/4166598
+	http://www.cnblogs.com/littlehann/p/3690187.html
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+4.	HashMap和HashTable
+
+	HashMap和HashTable有什么区别，一个比较简单的回答是：
+		1)	HashMap是非线程安全的，HashTable是线程安全的。
+		2)	HashMap的键和值都允许有null值存在，而HashTable则不行。
+		3)	因为线程安全的问题，HashMap效率比HashTable的要高。
+
+	HashMap中Value可以相同，但是键不可以相同
+		当插入HashMap的key相同时，会覆盖原有的Value，且返回原Value值
+			map.put("egg", 1);
+			int egg = (Integer) map.put("egg", 3);
+			egg = 1;
+				map.get("egg") 
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+5.	Double和double区别
+	Java 提供两种不同的类型：引用类型和原始类型（或内置类型）。int是java的原始数据类型，Integer是java为int提供的封装类
+
+	引用类型和原始类型的行为完全不同，并且它们具有不同的语义。引用类型和原始类型具有不同的特征和用法，它们包括：大小和速度问题，这种类型以哪种类型的数据结构存储，当引用类型和原始类型用作某个类的实例数据时所指定的缺省值。对象引用实例变量的缺省值为 null，而原始类型实例变量的缺省值与它们的类型有关。
+
+	Integer是int的封装类，里面有很多进行处理的静态方法   
+	Integer是对象而int不是，内存的分配位置也不一样
+
+	int是一种基本数据类型，而Integer是相应于int的类类型，称为对象包装。   
+	实现这种对象包装的目的主要是因为类能够提供必要的方法，用于实现基本数据类型的数值与可打印字符串之间的转换，以及一些其他的实用程序方法；   
+	另外，有些数据结构库类只能操作对象，而不支持基本数据类型的变量，包装类提供一种便利的方式，能够把基本数据类型转换成等价的对象，从而可以利用数据结构库类进行处理。
