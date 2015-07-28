@@ -1,0 +1,32 @@
+为Phonegap Android平台增加websocket支持，使默认成为socket.io首选通道选择
+	http://www.blogjava.net/yongboy/archive/2012/05/10/377787.html
+	
+Connecting to a Socket.IO server from Android
+	http://nkzawa.tumblr.com/post/46850605422/connecting-to-a-socket-io-server-from-android
+	
+Socket.io between Android and Node.js
+	http://marcostagni.com/socket-io-between-android-and-node-js/
+	
+Native Socket.IO and Android	
+	http://socket.io/blog/native-socket-io-and-android/
+	
+socket.io-client.java	
+	https://github.com/nkzawa/socket.io-client.java
+	
+Android Java socket communication with Socket.IO
+	http://stackoverflow.com/questions/6014787/android-java-socket-communication-with-socket-io
+	
+Android App Connecting to Node.js server using Socket.io
+	http://stackoverflow.com/questions/25223189/android-app-connecting-to-node-js-server-using-socket-io
+	
+Successfully run Socket.IO Android Project with NodeJS
+	http://stackoverflow.com/questions/19674118/successfully-run-socket-io-android-project-with-nodejs
+	
+Ionic SocketIo Chat Application Tutorial
+	https://www.airpair.com/ionic-framework/posts/ionic-socketio-chat-application-tutorial
+	
+Android Socket.IO Client
+	https://bitbucket.org/sonnylazuardi/android-socket.io-client/overview
+
+netty的websocket服务端开发
+	http://blog.csdn.net/fjslovejhl/article/details/12611579

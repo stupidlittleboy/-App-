@@ -1,0 +1,11 @@
+1.	Cloneable接口
+	copy和原型的内容一样，但是又是彼此隔离的。即在clone之后，改变其中一个不影响另外一个
+	
+	http://kentkwan.iteye.com/blog/739514
+
+
+	volatile关键字
+hashmap key是否可重复
+HashMap（1）
+List
+Double和double关系
