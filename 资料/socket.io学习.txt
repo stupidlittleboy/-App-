@@ -30,3 +30,20 @@ Android Socket.IO Client
 
 netty的websocket服务端开发
 	http://blog.csdn.net/fjslovejhl/article/details/12611579
+
+Socket.io Java Client with support for 1.0.x
+	http://stackoverflow.com/questions/24988020/socket-io-java-client-with-support-for-1-0-x
+	
+构建实时Web的JAVA选择组合：socket.io client + socketio-netty server
+	http://www.blogjava.net/yongboy/archive/2012/05/24/378839.html
+	
+Java socket.io client
+	http://stackoverflow.com/questions/5783086/java-socket-io-client
+	
+My first Vim plugin for JavaScript Developer
+	http://nkzawa.tumblr.com/
+	
+	https://onedrive.live.com/?id=CF7746837803BC50%211278&cid=CF7746837803BC50&group=0&parId=CF7746837803BC50%21546&authkey=%21AKImvowSw7Ab2bE&action=locate
+	
+java|android 使用socket.io-client连接nodejs websocket
+	http://blog.csdn.net/aojiancc2/article/details/46129511

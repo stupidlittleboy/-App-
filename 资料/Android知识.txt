@@ -1,0 +1,8 @@
+1.	开发第一个Android应用之前你需要知道的六件事
+	http://www.csdn.net/article/2015-07-30/2825333
+
+2.	Android 基于Message的进程间通信 Messenger完全解析 
+	http://blog.csdn.net/lmj623565791/article/details/47017485
+
+3.	Android ViewDragHelper完全解析 自定义ViewGroup神器 
+	http://blog.csdn.net/lmj623565791/article/details/46858663
