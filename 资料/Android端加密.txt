@@ -1,0 +1,38 @@
+1.PHP,安卓,ios相互适用的AES加密算法
+	http://wangsigui.blog.51cto.com/5362901/1340415
+	
+2.iOS，Android，WP, .NET通用AES加密算法
+	http://www.cnblogs.com/mantgh/p/4244891.html
+	
+3.Android、iPhone和Java三个平台一致的加密工具
+	http://www.iteye.com/topic/1127949
+	
+4.关于AES256算法java端加密，ios端解密出现无法解密问题的解决方案
+	http://my.oschina.net/nicsun/blog/95632
+	
+5.Android与IOS通用AES加密解密方法
+	http://blog.csdn.net/yuxikuo_1/article/details/39476071
+	
+6.android、ios与服务器端php使用rsa加密解密通讯
+	http://blog.csdn.net/xyxjn/article/details/17225809
+	
+7.PHP android ios相互兼容的AES加密算法
+	http://www.funboxpower.com/868.html
+	
+8.Android DES AES MD5加密
+	http://m.blog.csdn.net/blog/u014071669/39341689
+	
+9.Java Base64、AES、SHA1、MD5加密算法
+	http://my.oschina.net/u/1447924/blog/377798
+	
+10.在Java、Android、PHP實現AES加解密，並且互通的方式
+	http://magiclen.org/aes/
+	
+11.AES Encryption : AES « Security « Android
+	http://www.java2s.com/Code/Android/Security/AESEncryption.htm
+
+12.Given final block not properly padded
+	http://bbs.csdn.net/topics/80064751
+	
+13.android 和java平台通用的AES加密解密(Android端与java端互相解密的解决方案)
+	http://my.oschina.net/wangxnn/blog/390346

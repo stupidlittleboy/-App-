@@ -1,0 +1,2 @@
+1.用开源项目JazzyViewPager实现ViewPager切换动画
+	http://www.cnblogs.com/tianzhijiexian/p/4044402.html

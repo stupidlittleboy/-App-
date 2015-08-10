@@ -6,3 +6,34 @@ Android之WebView解析
 
 Android WebView的Js对象注入漏洞解决方案
 	http://blog.csdn.net/leehong2005/article/details/11808557
+	
+Android webview加载html语言进行页面展示，出现乱码
+	http://blog.csdn.net/sy_bz/article/details/41311783
+	
+Android webview：loadUrl, loadData, loadDataWith...
+	http://my.oschina.net/u/249000/blog/110223
+	
+Android webview loadData 中文乱码
+	http://blog.csdn.net/top_code/article/details/9163597
+	
+loadData与loadDataWithBaseURL的区别
+	http://bbs.chinaunix.net/thread-3617508-1-1.html
+	
+Android WebView开发问题及优化汇总(转载)
+	http://www.androidcn.org/topic/552d1ae97ce7036d5c156c34
+	
+在WebView中如何让JS与Java安全地互相调用
+	http://www.pedant.cn/2014/07/04/webview-js-java-interface-research/
+	
+为WebView中的Java与JavaScript提供【安全可靠】的多样互通方案
+	https://github.com/pedant/safe-java-js-webview-bridge
+	
+Android WebView开发问题及优化汇总
+	http://www.itpub.net/thread-1892224-1-1.html
+	
+Android WebView的Js对象注入漏洞解决方案
+	http://blog.csdn.net/leehong2005/article/details/11808557
+	
+Android WebView学习(屏幕适配)
+	http://www.2cto.com/kf/201506/406729.html
+	
