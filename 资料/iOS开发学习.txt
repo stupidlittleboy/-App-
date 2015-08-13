@@ -1,0 +1,11 @@
+1.iOS App研发的最后冲刺：内测与部署
+	http://www.csdn.net/article/2015-08-10/2825427/1
+	
+2.Mac OS上反编译android app的环境搭建
+	http://mobile.51cto.com/aengine-487757.htm
+	
+3.IOS离线打包的那些梗，搞定了真高兴！
+	http://ask.dcloud.net.cn/article/202
+	
+4.iOS Web App初步
+	http://ued.sina.com.cn/?p=812

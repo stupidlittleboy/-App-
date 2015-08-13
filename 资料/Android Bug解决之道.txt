@@ -1,0 +1,2 @@
+1.使用AES加密时报javax.crypto.BadPaddingException: Given final block not properly padded异常。
+	加密和解密时初始化的keySize长度不一致
