@@ -1,2 +1,5 @@
 1.使用AES加密时报javax.crypto.BadPaddingException: Given final block not properly padded异常。
 	加密和解密时初始化的keySize长度不一致
+
+2.W/SystemWebViewClient﹕ URL blocked by whitelist
+	http://stackoverflow.com/questions/30991828/cordova-plugin-whitelist-failed-asking-for-cordova-ios-4

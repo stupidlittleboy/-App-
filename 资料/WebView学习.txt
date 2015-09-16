@@ -45,3 +45,9 @@ Android webview加载网页的三种方法比较
 
 Android WebView开发问题及优化汇总
 	http://www.360doc.com/content/15/0305/12/20385871_452704643.shtml
+
+Webview.loadDataWithBaseURL
+	http://blog.csdn.net/u012940983/article/details/40071887
+
+Android 4.4 webview 显示问题
+	http://blog.csdn.net/u012940983/article/details/40039479

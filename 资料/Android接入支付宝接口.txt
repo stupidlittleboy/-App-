@@ -1,0 +1,6 @@
+Android 开发之Android 应用程序如何调用支付宝接口
+	https://software.intel.com/zh-cn/blogs/2015/03/05/android-android
+	
+Android支付接入（一）：支付宝
+	http://udn.yyuap.com/article-201.html
+	
